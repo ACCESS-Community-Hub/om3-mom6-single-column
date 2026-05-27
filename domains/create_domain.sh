@@ -2,7 +2,7 @@
 set -euo pipefail
 
 usage() {
-    echo "Usage: $0 --name=<name> --lon=<lon> --lat=<lat> [--depth=<depth>]" >&2
+    echo "Usage: $0 --name=<name> --lon=<lon> --lat=<lat> [--depth=<depth>] [--srestore] [--trestore]" >&2
     exit 1
 }
 
@@ -10,6 +10,8 @@ NAME=""
 LON=""
 LAT=""
 DEPTH=""
+SRESTORE=false
+TRESTORE=false
 
 for arg in "$@"; do
     case "$arg" in
@@ -17,6 +19,8 @@ for arg in "$@"; do
         --lon=*)   LON="${arg#*=}" ;;
         --lat=*)   LAT="${arg#*=}" ;;
         --depth=*) DEPTH="${arg#*=}" ;;
+        --srestore) SRESTORE=true ;;
+        --trestore) TRESTORE=true ;;
         *) echo "Unknown argument: $arg" >&2; usage ;;
     esac
 done
@@ -80,6 +84,26 @@ python3 /g/data/vk83/apps/om3-scripts/wombat_ic_generation/regrid_forcing.py \
     --homogenize &>/dev/null
 echo "Done"
 
+if $SRESTORE; then
+    echo -n "Creating salt restoring climatology... "
+    python3 /g/data/vk83/apps/om3-scripts/wombat_ic_generation/regrid_forcing.py \
+        --forcing-filename=/g/data/vk83/configurations/inputs/access-om3/mom/surface_salt_restoring/global.25km/2025.10.24/salt_sfc_restore.nc \
+        --hgrid-filename=./horizontal_grid.nc \
+        --output-filename=./salt_restore.nc \
+        --homogenize &>/dev/null
+    echo "Done"
+fi
+
+if $TRESTORE; then
+    echo -n "Creating temp restoring climatology... "
+    python3 /g/data/vk83/apps/om3-scripts/wombat_ic_generation/regrid_forcing.py \
+        --forcing-filename=/g/data/vk83/prerelease/configurations/inputs/access-om3/mom/surface_temp_restoring/global.25km/2026.05.27/temp_sfc_restore.nc \
+        --hgrid-filename=./horizontal_grid.nc \
+        --output-filename=./temp_restore.nc \
+        --homogenize &>/dev/null
+    echo "Done"
+fi
+
 if [[ -n "$DEPTH" ]]; then
     echo -n "Creating topog.nc... "
     python3 - &>/dev/null <<EOF
@@ -105,6 +129,11 @@ WESTLON=$(awk "BEGIN { printf \"%.10g\", $LON - 0.5 }")
     echo "F_0 = $F0"
     echo "SOUTHLAT = $SOUTHLAT"
     echo "WESTLON = $WESTLON"
-    [[ -n "$DEPTH" ]] && echo '#override TOPO_CONFIG = "file"'
+    [[ -n "$DEPTH" ]]           && echo '#override TOPO_CONFIG = "file"'
+    $SRESTORE                   && echo 'RESTORE_SALINITY = True'
+    $SRESTORE                   && echo 'SALT_RESTORE_VARIABLE = "asalt"'
+    $SRESTORE                   && echo 'SRESTORE_AS_SFLUX = True'
+    $TRESTORE                   && echo 'RESTORE_TEMPERATURE = True'
+    { $SRESTORE || $TRESTORE; } && echo 'FLUXCONST = 0.1667'
 } > MOM_override
 echo "Done"

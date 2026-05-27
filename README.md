@@ -37,6 +37,8 @@ The domain comprises 2x2 h-cells spanning 1x1 degree and can be easily relocated
 - WOMBAT sFe forcing
 - Coriolis parameter
 - [Optional] Ocean depth
+- [Optional] Surface salinity restoring climatology
+- [Optional] Surface temperature restoring climatology
 
 Existing domains can be found in the `./domains` directory. To use an existing domain, simply create a symlink in the base directory to the domain of choice as follows
 
@@ -51,8 +53,13 @@ New domains can be easily created using `./domains/create_domain.sh`
 
 ```
 $ ./domains/create_domain.sh
-Usage: ./domains/create_domain.sh --name=<name> --lon=<lon> --lat=<lat> [--depth=<depth>]
+Usage: ./domains/create_domain.sh --name=<name> --lon=<lon> --lat=<lat> [--depth=<depth>] [--srestore] [--trestore]
 ```
+
+where, if:
+- `--depth=<depth>` is not provided, the default depth is 6000m
+- `--srestore` is not provided, no salinity restoring is configured
+- `--trestore` is not provided, no temperature restoring is configured
 
 E.g. the existing BATS domain was created as follows
 
