@@ -11,11 +11,6 @@ work/INPUT/JRA55do-drof-ESMFmesh.nc:
   hashes:
     binhash: 9f3ee3ce42e776fcbee8026e0c3880f5
     md5: bf62c4e7786ddfbe56d61b3074d5d16d
-work/INPUT/MOM_override:
-  fullpath: /g/data/tm70/ds0092/model/config/om3_M_single-column/domains/BATS/MOM_override
-  hashes:
-    binhash: 924dc74d046b44243c73d7ac0823e11b
-    md5: 3f60a8a4e1369b6d72ecb30600d755f3
 work/INPUT/RYF.friver.1990_1991.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/JRA-55/RYF/v1-6/2026.04.15/RYF.friver.1990_1991.nc
   hashes:
@@ -71,41 +66,16 @@ work/INPUT/RYF.vas.1990_1991.nc:
   hashes:
     binhash: 32c97e6ab7f375008a45dbd3dae259f8
     md5: bd0ccd8ef7f639ca77b6705f0d6d1fcb
-work/INPUT/SFe_Hamiltonetal2020_monthly_clim.nc:
-  fullpath: /g/data/tm70/ds0092/model/config/om3_M_single-column/domains/BATS/SFe_Hamiltonetal2020_monthly_clim.nc
-  hashes:
-    binhash: 61e0ed1c5cf760782fb27c4c6a63d17c
-    md5: a5c9d1c99c3db0a33e23e42a21890282
-work/INPUT/chl_globcolour_monthly_clim.nc:
-  fullpath: /g/data/tm70/ds0092/model/config/om3_M_single-column/domains/BATS/chl_globcolour_monthly_clim.nc
-  hashes:
-    binhash: a962b70a9d15f1076711f069e9213a8e
-    md5: df6a9e7d1096b9d2deab6213ee7dc9a2
 work/INPUT/grid_spec.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/mom/grids/mosaic/share/2024.05.08/grid_spec.nc
   hashes:
     binhash: 2fb8d504904e652a37185852f17dbcd4
     md5: 709268cd891e6f0e827f6de0249f1a3d
-work/INPUT/horizontal_grid.nc:
-  fullpath: /g/data/tm70/ds0092/model/config/om3_M_single-column/domains/BATS/horizontal_grid.nc
-  hashes:
-    binhash: c283730179cf54f93b675bfd3bc25ece
-    md5: 4470d89a909779200f3841428d5b486c
-work/INPUT/ocean_mosaic.nc:
-  fullpath: /g/data/tm70/ds0092/model/config/om3_M_single-column/domains/BATS/ocean_mosaic.nc
-  hashes:
-    binhash: 233180a1d0c055a8f6fc2b101ee073ed
-    md5: c267baee375329253290655b83ed11b2
 work/INPUT/ocean_vgrid.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/mom/grids/vertical/global.25km/2026.03.16/ocean_vgrid.nc
   hashes:
     binhash: a50dfc9f3216a3dbb32c2b32f2fce4b2
     md5: 04e88652ff339b09b29ea4adb8fa2229
-work/INPUT/single-column-ESMFmesh.nc:
-  fullpath: /g/data/tm70/ds0092/model/config/om3_M_single-column/domains/BATS/single-column-ESMFmesh.nc
-  hashes:
-    binhash: 24c123b06821624cc2e82ac48366dc1a
-    md5: 1bf9a35376fd0a7df792cdac489fc536
 work/INPUT/woa23_ts_01_mom.nc:
   fullpath: /g/data/vk83/configurations/inputs/access-om3/mom/initial_conditions/global.25km/2025.10.24/woa23_ts_01_mom.nc
   hashes:
