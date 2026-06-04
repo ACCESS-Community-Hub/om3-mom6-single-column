@@ -9,7 +9,7 @@ The configurations here have been modified to:
 - run with [Payu](https://github.com/payu-org/payu)
 - use ocean parameters based on those used in [ACCESS-OM3 25km configurations](https://github.com/ACCESS-NRI/access-om3-configs/tree/dev-MC_25km_jra_ryf%2Bwombatlite)
 
-This branch uses JRA55-do repeat-year forcing and WOMBATmid biogeochemistry. Other configurations are available in other branches in this repo.
+This branch uses JRA55-do interannual forcing and WOMBATmid biogeochemistry. Other configurations are available in other branches in this repo.
 
 ## To run
 
