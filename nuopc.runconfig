@@ -35,6 +35,10 @@ PELAYOUT_attributes::
      cpl_nthreads = 1
      cpl_pestride = 1
      cpl_rootpe = 0
+     ice_ntasks = 1
+     ice_nthreads = 1
+     ice_pestride = 1
+     ice_rootpe = 2
      esmf_logging = ESMF_LOGKIND_NONE
      ninst = 1
      ocn_ntasks = 1
@@ -50,11 +54,11 @@ PELAYOUT_attributes::
      rof_rootpe = 0
 ::
 
-component_list: MED ATM OCN ROF
+component_list: MED ATM OCN ICE ROF
 ALLCOMP_attributes::
      ATM_model = datm
      GLC_model = sglc
-     ICE_model = sice
+     ICE_model = cice
      LND_model = slnd
      MED_model = cesm
      OCN_model = mom
@@ -95,7 +99,7 @@ ALLCOMP_attributes::
      ice_ncat = 5
      mediator_present = true
      mesh_atm = ./INPUT/single-column-ESMFmesh.nc
-     mesh_ice = UNSET
+     mesh_ice = ./INPUT/single-column-ESMFmesh.nc
      mesh_lnd = UNSET
      mesh_mask = ./INPUT/single-column-ESMFmesh.nc
      mesh_ocn = ./INPUT/single-column-ESMFmesh.nc
@@ -291,7 +295,7 @@ ICE_modelio::
      pio_netcdf_format = nothing
      pio_numiotasks = 1
      pio_rearranger = 1
-     pio_root = 1
+     pio_root = 2
      pio_stride = 1
      pio_typename = netcdf4p
 ::

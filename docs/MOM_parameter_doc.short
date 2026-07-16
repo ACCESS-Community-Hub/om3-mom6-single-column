@@ -85,12 +85,12 @@ GRID_CONFIG = "cartesian"       !
                                 !     cartesian - use a (flat) Cartesian grid.
                                 !     spherical - use a simple spherical grid.
                                 !     mercator - use a Mercator spherical grid.
-SOUTHLAT = 31.2                 !   [degrees]
+SOUTHLAT = -74.5                !   [degrees]
                                 ! The southern latitude of the domain or the equivalent starting value for the
                                 ! y-axis.
 LENLAT = 1.0                    !   [degrees]
                                 ! The latitudinal or y-direction length of the domain.
-WESTLON = -64.7                 !   [degrees] default = 0.0
+WESTLON = -42.5                 !   [degrees] default = 0.0
                                 ! The western longitude of the domain or the equivalent starting value for the
                                 ! x-axis.
 LENLON = 1.0                    !   [degrees]
@@ -130,7 +130,7 @@ ROTATION = "betaplane"          ! default = "2omegasinlat"
                                 !       times the sine of latitude.
                                 !     betaplane - Use a beta-plane or f-plane.
                                 !     USER - call a user modified routine.
-F_0 = 7.66358E-05               !   [s-1] default = 0.0
+F_0 = -1.40192E-04              !   [s-1] default = 0.0
                                 ! The reference value of the Coriolis parameter with the betaplane option.
 
 ! === module MOM_verticalGrid ===

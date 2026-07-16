@@ -14,12 +14,12 @@ modules:
         - access-om3/2026.03.000
 
 queue: normalsr
-ncpus: 2
+ncpus: 3
 walltime: 1:00:00
 jobname: single_column
 
 model: access-om3
-exe: access-om3-MOM6
+exe: access-om3-MOM6-CICE6
 input:
     - /g/data/vk83/prerelease/configurations/inputs/access-om3/mom/grids/mosaic/share/2024.05.08/grid_spec.nc
     - /g/data/vk83/prerelease/configurations/inputs/access-om3/mom/grids/vertical/global.25km/2026.03.16/ocean_vgrid.nc

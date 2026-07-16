@@ -11,6 +11,11 @@ work/INPUT/JRA55do-drof-ESMFmesh.nc:
   hashes:
     binhash: 9f3ee3ce42e776fcbee8026e0c3880f5
     md5: bf62c4e7786ddfbe56d61b3074d5d16d
+work/INPUT/MOM_override:
+  fullpath: /g/data/tm70/as2285/payu/om3-mom6-single-column/domains/weddell/MOM_override
+  hashes:
+    binhash: e5fe93dd3eb654fd13bd4cb9ba3a2755
+    md5: 764adcb6a7f2cbea437c3404b8a4d26f
 work/INPUT/RYF.friver.1990_1991.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/JRA-55/RYF/v1-6/2026.04.15/RYF.friver.1990_1991.nc
   hashes:
@@ -66,16 +71,41 @@ work/INPUT/RYF.vas.1990_1991.nc:
   hashes:
     binhash: 32c97e6ab7f375008a45dbd3dae259f8
     md5: bd0ccd8ef7f639ca77b6705f0d6d1fcb
+work/INPUT/SFe_Hamiltonetal2020_monthly_clim.nc:
+  fullpath: /g/data/tm70/as2285/payu/om3-mom6-single-column/domains/weddell/SFe_Hamiltonetal2020_monthly_clim.nc
+  hashes:
+    binhash: d5c9a7b13b70db8fd9b3f7aa08f60480
+    md5: f9ec787691accd503d41b32f8bd93c76
+work/INPUT/chl_globcolour_monthly_clim.nc:
+  fullpath: /g/data/tm70/as2285/payu/om3-mom6-single-column/domains/weddell/chl_globcolour_monthly_clim.nc
+  hashes:
+    binhash: 318b742d2732a900f56db95dd37d4f0c
+    md5: 330a8d914005c2c16f50c9cfa80d4431
 work/INPUT/grid_spec.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/mom/grids/mosaic/share/2024.05.08/grid_spec.nc
   hashes:
     binhash: 2fb8d504904e652a37185852f17dbcd4
     md5: 709268cd891e6f0e827f6de0249f1a3d
+work/INPUT/horizontal_grid.nc:
+  fullpath: /g/data/tm70/as2285/payu/om3-mom6-single-column/domains/weddell/horizontal_grid.nc
+  hashes:
+    binhash: 9947788a2fa94538f4ac66811c8a3457
+    md5: e4c108f33952afed2007f61cb011263a
+work/INPUT/ocean_mosaic.nc:
+  fullpath: /g/data/tm70/as2285/payu/om3-mom6-single-column/domains/weddell/ocean_mosaic.nc
+  hashes:
+    binhash: 823c029ee540e0789305bca5c1aa455f
+    md5: 29a3f9dbc7efa16cfe57a00daf659a26
 work/INPUT/ocean_vgrid.nc:
   fullpath: /g/data/vk83/prerelease/configurations/inputs/access-om3/mom/grids/vertical/global.25km/2026.03.16/ocean_vgrid.nc
   hashes:
     binhash: a50dfc9f3216a3dbb32c2b32f2fce4b2
     md5: 04e88652ff339b09b29ea4adb8fa2229
+work/INPUT/single-column-ESMFmesh.nc:
+  fullpath: /g/data/tm70/as2285/payu/om3-mom6-single-column/domains/weddell/single-column-ESMFmesh.nc
+  hashes:
+    binhash: 7bfd8bf5e72958fe4608b54380a2730b
+    md5: 4d7ac6064fddfb1e779d191a578833d5
 work/INPUT/woa23_ts_01_mom.nc:
   fullpath: /g/data/vk83/configurations/inputs/access-om3/mom/initial_conditions/global.25km/2025.10.24/woa23_ts_01_mom.nc
   hashes:
